@@ -1,0 +1,12 @@
+node_modules/*
+.angular/*
+.angular/cache/
+
+.idea/
+/.idea
+
+/node_modules
+/.angular/cache/
+
+node_modules
+.angular/cache
