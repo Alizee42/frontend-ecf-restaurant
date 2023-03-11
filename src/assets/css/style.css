@@ -53,6 +53,10 @@ h6 {
 	font-family: Chilanka, serif;
 }
 
+.text-accueil-welcome {
+	color: #fff;
+}
+
 
 .lead {
     font-size: 18px;
@@ -640,6 +644,15 @@ button:focus{
 .page-breadcrumb {
     padding: 250px 0 150px;
     background: url(../images/background/fontpage.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+}
+
+.page-slider {
+    padding: 250px 0 150px;
+    background: url(../images/slide/slider-02.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 0;
