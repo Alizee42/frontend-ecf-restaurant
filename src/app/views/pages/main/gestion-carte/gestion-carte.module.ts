@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { GestionCarteRoutingModule } from './gestion-carte-routing.module';
 import { GestionCarteComponent } from './gestion-carte.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { GestionCarteComponent } from './gestion-carte.component';
   ],
   imports: [
     CommonModule,
-    GestionCarteRoutingModule
+    GestionCarteRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class GestionCarteModule { }

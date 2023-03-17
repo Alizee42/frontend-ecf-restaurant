@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { GestionMenuRoutingModule } from './gestion-menu-routing.module';
 import { GestionMenuComponent } from './gestion-menu.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { GestionMenuComponent } from './gestion-menu.component';
   ],
   imports: [
     CommonModule,
-    GestionMenuRoutingModule
+    GestionMenuRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class GestionMenuModule { }
