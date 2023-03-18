@@ -1,36 +1,50 @@
 
-# frontend-ecf-restaurant
+###  Frontend-ecf-restaurant
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+- [x] HTML5 
+- [x] CSS3 
+- [x] Bootstrap
+- [x] JavaScript (Angular Version 15.1.4)
+- [x] Netlify
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Install yarn dependencies
-
-npm i -g yarn
-
-## Lien web app
+# Netlify Webapp
 
 https://main--subtle-alpaca-8698c9.netlify.app/
+
+![Quai Antique Webapp](https://raw.githubusercontent.com/Alizee42/frontend-ecf-restaurant/main/src/assets/images/logo/logo3.jpg)
+
+
+#### Installation En local
+
+###### Etape 1: Cloner le projet front-end
+[Download](https://github.com/Alizee42/frontend-ecf-restaurant)
+```
+git clone https://github.com/Alizee42/frontend-ecf-restaurant.git
+```
+
+###### Etape 2: Installer les dependences
+Ouvrir le terminal dans le projet frontend-ecf-restaurant
+Ensuite lancer la commande
+``` yarn
+```
+
+
+###### Etape 3: Configuration et connection au back-end
+Modifier le BASE_URL en insérant le port de démarrage du back-end
+dans les fichiers de services
+``` 
+Se rendre dans le dossier "src/app/core/service/
+Ensuite modifier l'url de connection au back-end dans les ficheirs de service
+private baseUrl = 'https://localhost:<port_back_end>/api/rest/v1';
+``` 
+
+###### Etape 6: Demarrer le projet
+Saisir la commande
+``` 
+ng serve
+
+Naviguer sur le lien `http://localhost:4200/`
+``` 
+
+
+
