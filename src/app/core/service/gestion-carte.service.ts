@@ -1,4 +1,3 @@
-// Ajouter les imports en premiers (copier tout et remplacer)
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -8,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class GestionCarteService {
 
-  //Copier a partir d'ici
+  
   private baseUrl = 'https://backend-restaurant-ecf.herokuapp.com/api/rest/v1';
 
   constructor(private httpClient: HttpClient) { }
@@ -33,5 +32,13 @@ export class GestionCarteService {
     return this.httpClient.delete(`${this.baseUrl}/cartes/${carteId}`);
   }
 
-  //Jusqu'ici
+  public publishCarte(carteId: number): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/cartes/${carteId}/publier`);
+  }
+
+  public desactivateCarte(carteId: number): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/cartes/${carteId}/desactiver`);
+  }
+
+  
 }

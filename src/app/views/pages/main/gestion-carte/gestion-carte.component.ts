@@ -43,6 +43,7 @@ export class GestionCarteComponent implements OnInit {
           this.cartes = data
         })
   }
+
   public getOneCarte(carteId: number): any {
     this.gestionCarteService.getOneCarte(carteId)
         .pipe(takeUntil(this._destroy$))
@@ -71,6 +72,24 @@ export class GestionCarteComponent implements OnInit {
               console.log("Create Carte", data);
               window.location.reload();
           })
+  }
+
+  public publishCarte(carteId: number): any {
+    this.gestionCarteService.publishCarte(carteId)
+        .pipe(takeUntil(this._destroy$))
+        .subscribe(data => {
+          console.log("Publier Carte", data);
+          this.carte = data
+        })
+  }
+
+  public desactivateCarte(carteId: number): any {
+    this.gestionCarteService.desactivateCarte(carteId)
+        .pipe(takeUntil(this._destroy$))
+        .subscribe(data => {
+          console.log("Desactiver Carte", data);
+          this.carte = data
+        })
   }
 
   ngOnDestroy() {
