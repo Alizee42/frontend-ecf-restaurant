@@ -28,12 +28,7 @@ a {
     text-decoration: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
@@ -57,23 +52,10 @@ h6 {
 	color: #fff;
 }
 
-
-.lead {
-    font-size: 18px;
-    line-height: 30px;
-    color: #767676;
-    margin: 0;
-    padding: 0;
-}
-
 ul, li, ol{
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
-}
-
-button:focus{
-	outline: none;
 }
 
 
@@ -122,33 +104,10 @@ button:focus{
 	background: #cfa671;
 }
 
-/*------------------------------------------------------------------
-    Slider
--------------------------------------------------------------------*/
-
-.cover-slides{
-	height: 100vh;
-}
-
-.cover-slides .container{
-	height: 100%;
-	position: relative;
-	z-index: 2;
-}
-.cover-slides .container > .row {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-.cover-slides .container > .row {
-    height: 100%;
-}
 
 .btn{
 	text-transform: uppercase;
 	padding: 19px 36px;
-}
-.btn{
 	display: inline-block;
 	font-weight: 600;
 	text-align: center;
@@ -161,41 +120,24 @@ button:focus{
 	line-height: 1.5;
 	border-radius: .1875rem;
 }
+
+
 .btn-outline-new-white {
     color: #fff;
     background-color: transparent;
     background-image: none;
     border-color: #cfa671;
 }
+
 .btn-outline-new-white:hover {
     color: #ffffff;
     background-color: #cfa671;
     border-color: #cfa671;
 }
 
-.overlay-background {
-    background: #333;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-	opacity: 0.5;
-}
-
-.cover-slides h1{
-	font-family: 'Arbutus Slab', serif;
-	font-weight: 500;
-	font-size: 64px;
-	color: #fff;
-}
-.cover-slides p{
-	font-size: 18px;
-	color: #fff;
-}
 
 /*------------------------------------------------------------------
-    About
+    A propos
 -------------------------------------------------------------------*/
 
 .about-section-box{
@@ -228,19 +170,19 @@ button:focus{
 }
 
 /*------------------------------------------------------------------
-    QT
+    Citation
 -------------------------------------------------------------------*/
 
 
-.qt-background{
-	background: url(../images/background/qt-bg.jpg) no-repeat;
+.citation-background{
+	background: url(../images/background/citation-bg.jpg) no-repeat;
 	background-size: cover;
 	padding: 100px 0;
 	background-attachment: fixed;
 	background-position: center center;
 	position: relative;
 }
-.qt-background p {
+.citation-background p {
     font-size: 35px;
     font-weight: 300;
     line-height: 44px;
@@ -249,7 +191,7 @@ button:focus{
 	margin-bottom: 20px;
 }
 
-.qt-background span {
+.citation-background span {
     color: #fff;
     font-size: 20px;  
 	font-weight: 500;	
@@ -264,18 +206,13 @@ button:focus{
 }
 
 .heading-title{
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 .heading-title h2{
-	color: #010101;
 	font-size: 28px;
 	font-family: 'Arbutus Slab', serif;
 }
-.heading-title p{
-	font-size: 18px;
-	font-weight: 200;
-	margin: 0px;
-}
+
 
 .filter-button-group {
     border: 1px solid #e4e4e4;
@@ -303,23 +240,19 @@ button:focus{
     box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
 }
 
-.gallery-single{
-	margin: 30px 0px;
-}
-
 .gallery-single {
+	margin: 30px 0px;
     position: relative;
     overflow: hidden;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
 }
 
-
-.flex-grow-1 > span {
+.titre_menu > span {
 	font-weight: bold;
 }
 
-.d-flex > h6 {
+.nos_menus > h6 {
 	color: #bc8c4c !important;
 	font-weight: bold;
 }
@@ -387,7 +320,7 @@ button:focus{
 }
 
 /*------------------------------------------------------------------
-    Customer Reviews
+   Avis clients 
 -------------------------------------------------------------------*/
 
 .customer-reviews-box{
@@ -470,9 +403,7 @@ button:focus{
 	padding: 30px 0;
 }
 
-.overflow-hidden {
-    overflow: hidden;
-}
+
 
 .contact-imfo-box i{
 	display: block;
@@ -537,6 +468,7 @@ button:focus{
 	position: relative;
 	z-index: 1;
 }
+
 .footer-area h3{
 	color: #ffffff;
 	text-transform: uppercase;
@@ -544,6 +476,7 @@ button:focus{
 	border-bottom: 1px dashed rgba(207, 166, 113, 0.5);
 	margin-bottom: 10px;
 }
+
 .footer-area p{
 	font-size: 15px;
 	color: rgba(255, 255, 255, 0.8);
@@ -641,7 +574,7 @@ button:focus{
     All Pages
 -------------------------------------------------------------------*/
 
-.page-breadcrumb {
+.banniere_background {
     padding: 250px 0 150px;
     background: url(../images/background/fontpage.jpg) no-repeat;
     background-attachment: fixed;
@@ -650,7 +583,7 @@ button:focus{
     position: relative;
 }
 
-.page-slider {
+.banniere_accueil {
     padding: 250px 0 150px;
     background: url(../images/slide/slider-02.jpg) no-repeat;
     background-attachment: fixed;
@@ -681,10 +614,10 @@ button:focus{
 	padding: 0px;
 }
 
-.stuff-box{
+.our-team-box{
 	padding: 70px 0px;
 }
-
+  
 .our-team{
     border: 2px solid #d0a772;
     border-radius: 0px;
@@ -693,8 +626,7 @@ button:focus{
     z-index: 1;
     position: relative;
 }
-.our-team:before,
-.our-team:after{
+.our-team:before,.our-team:after{
     content: "";
     width: 100%;
     height: 104%;
