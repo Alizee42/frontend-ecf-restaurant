@@ -25,7 +25,8 @@ git clone https://github.com/Alizee42/frontend-ecf-restaurant.git
 ###### Etape 2: Installer les dependences
 Ouvrir le terminal dans le projet frontend-ecf-restaurant
 Ensuite lancer la commande
-``` yarn
+```
+yarn
 ```
 
 
