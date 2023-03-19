@@ -55,7 +55,8 @@ export class GestionMenuComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Menu", data);
-          this.menu = data
+          this.menu = data;
+          window.location.reload();
         })
   }
 

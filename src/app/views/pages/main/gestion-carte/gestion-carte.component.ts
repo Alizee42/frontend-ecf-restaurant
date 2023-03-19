@@ -58,7 +58,8 @@ export class GestionCarteComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Carte", data);
-          this.carte = data
+          this.carte = data;
+          window.location.reload();
         })
   }
 

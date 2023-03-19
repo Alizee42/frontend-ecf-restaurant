@@ -57,7 +57,8 @@ export class GestionFormuleComponent  implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Formule", data);
-          this.formule = data
+          this.formule = data;
+          window.location.reload();
         })
   }
 

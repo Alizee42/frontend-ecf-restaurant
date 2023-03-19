@@ -58,7 +58,8 @@ export class GestionCompteUtilisateurComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove  utilisateur", data);
-          this.utilisateur = data
+          this.utilisateur = data;
+          window.location.reload();
         })
   }
   
