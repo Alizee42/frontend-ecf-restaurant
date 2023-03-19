@@ -31,6 +31,6 @@ export class GestionCategorieService {
     return this.httpClient.delete(`${this.baseUrl}/categories/${categorieId}`);
   }
 
-  //Jusqu'ici
+
 }
 
