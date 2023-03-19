@@ -1,7 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Subject, takeUntil} from "rxjs";
 
-//Importer ça
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionCategorieService } from '@core/service/gestion-categorie.service';
@@ -17,25 +16,23 @@ export class GestionCategorieComponent  implements OnInit {
   public categories = [];
   public category: any;
   
-  //Creer ces 2 propriétés avec le meme nom que le formulaire
+
   formGestionCategorie!: FormGroup;
   private _destroy$ = new Subject<void>();
 
-  //Ajouter le second paramètre private formBuilder:FormBuilder
+
   constructor(private gestionCategorieService : GestionCategorieService, private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
     this.getCategories();
 
-    // Ajouter ici methode
     this.initForm();
   }
 
-  // Ecrire cette methode
+
   public initForm(): void {
       this.formGestionCategorie = this.formBuilder.group({
-        //Ajouter ici les noms de champs du formulaire du html  
         nom: ['']
       })
   }
@@ -67,7 +64,6 @@ export class GestionCategorieComponent  implements OnInit {
         })
   }
 
-  //Creer la methode
   public createOrUpdateCategorie(id?: number): any {
       console.log("Create or Update Categorie", this.formGestionCategorie.value);
       const observable = id ? this.gestionCategorieService.updateCategorie(this.formGestionCategorie.value, id)
@@ -80,7 +76,6 @@ export class GestionCategorieComponent  implements OnInit {
           })
   }
 
-  //Ajouter cette methode
   ngOnDestroy() {
     this._destroy$.next();
     this._destroy$.complete();

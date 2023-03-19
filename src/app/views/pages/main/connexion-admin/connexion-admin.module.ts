@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ConnexionAdminRoutingModule } from './connexion-admin-routing.module';
 import { ConnexionAdminComponent } from './connexion-admin.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ConnexionAdminComponent } from './connexion-admin.component';
   ],
   imports: [
     CommonModule,
-    ConnexionAdminRoutingModule
+    ConnexionAdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ConnexionAdminModule { }

@@ -48,4 +48,12 @@ Naviguer sur le lien `http://localhost:4200/`
 ``` 
 
 
+###### Etape 7: Accès de connexion à l'espace administrateur
+Saisir
+``` 
+Email: quaiantique@admin.com
+Mot de passe: 12345
+``` 
+
+
 
