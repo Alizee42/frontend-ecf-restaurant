@@ -52,7 +52,7 @@ Naviguer sur le lien `http://localhost:4200/`
 Saisir
 ``` 
 Email: quaiantique@admin.com
-Mot de passe: 12345
+Mot de passe: 123456789@
 ``` 
 
 
