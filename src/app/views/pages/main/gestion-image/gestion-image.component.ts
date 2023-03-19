@@ -55,7 +55,8 @@ export class GestionImageComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Image", data);
-          this.image = data
+          this.image = data;
+          window.location.reload();
         })
   }
 

@@ -1,5 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+
+// Ajouter Observable
+import {Subject, takeUntil, Observable} from "rxjs";
 
 import {FormBuilder, FormGroup} from '@angular/forms';
 
@@ -13,6 +15,9 @@ import { GestionCategorieService } from '@core/service/gestion-categorie.service
 })
 export class GestionCategorieComponent  implements OnInit {
 
+  // Ajouter ici
+  public categories$: Observable<any> = new Observable<any>();
+
   public categories = [];
   public category: any;
   
@@ -25,6 +30,8 @@ export class GestionCategorieComponent  implements OnInit {
   }
 
   ngOnInit(): void {
+    this.categories$ = this.gestionCategorieService.getCategories();
+    
     this.getCategories();
 
     this.initForm();
@@ -60,7 +67,8 @@ export class GestionCategorieComponent  implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Category", data);
-          this.category = data
+          this.category = data;
+          window.location.reload();
         })
   }
 

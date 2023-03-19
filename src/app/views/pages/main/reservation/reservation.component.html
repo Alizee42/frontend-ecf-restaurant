@@ -25,20 +25,20 @@
                             <img src="assets/images/contact/contact.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page" class="w-100 rounded shadow">
                         </div>
                         <div class="col-md-6">
-                            <form>
+                            <form [formGroup]="formReservation" (ngSubmit)="createReservation()">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom & Prénoms">
+                                    <input formControlName="nom" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom & Prénoms">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" name="phone" placeholder="Téléphone">
+                                    <input formControlName="numero" type="tel" class="form-control" name="phone" placeholder="Téléphone">
                                 </div>
                                 <div class="form-group md-form md-outline datepicker">
-                                    <input placeholder="Selectionner la date" type="date" id="Customization" class="form-control">
+                                    <input formControlName="date" placeholder="Selectionner la date" type="date" id="Customization" class="form-control">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         <label>Midi</label>
-                                        <select class="form-control">
+                                        <select formControlName="heurePrevu" class="form-control">
                                             <option>Selectionnez votre horaire</option>
                                             <option>12h00</option>
                                             <option>12h15</option>
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label>Soir</label>
-                                        <select class="form-control">
+                                        <select formControlName="heurePrevu" class="form-control">
                                             <option>Selectionnez votre horaire</option>
                                             <option>19h00</option>
                                             <option>19h15</option>
@@ -68,10 +68,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" name="seats" placeholder="Nombre de couverts">
+                                    <input formControlName="nombreConvive" type="number" class="form-control" name="seats" placeholder="Nombre de couverts">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="allergies" aria-describedby="emailHelp" placeholder="Mentionnez les allergies">
+                                    <input formControlName="allergie" type="text" class="form-control" id="allergies" aria-describedby="emailHelp" placeholder="Mentionnez les allergies">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block btn-reserver">Reserver</button>
                             </form>

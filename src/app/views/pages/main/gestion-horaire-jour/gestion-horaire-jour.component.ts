@@ -59,7 +59,8 @@ export class GestionHoraireJourComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           console.log("Remove Horaire", data);
-          this.horaire = data
+          this.horaire = data;
+          window.location.reload();
         })
       }
 
