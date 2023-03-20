@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 
 import { GestionHoraireJourService } from '@core/service/gestion-horaire-jour.service';
 
@@ -11,6 +11,7 @@ import { GestionHoraireJourService } from '@core/service/gestion-horaire-jour.se
 })
 export class FooterComponent implements OnInit {
 
+  public horaires$: Observable<any> = new Observable<any>();
   public horaires = [];
   public horaire: any;
   private _destroy$ = new Subject<void>();
@@ -19,16 +20,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getHoraireJours();
-  }
-
-  public getHoraireJours(): any {
-    this.gestionHoraireJourService.getHoraires()
-        .pipe(takeUntil(this._destroy$))
-        .subscribe(data => {
-          console.log("Horaires", data);
-          this.horaires = data
-        })
+    this.horaires$ = this.gestionHoraireJourService.getHoraires();
   }
 
   ngOnDestroy() {
