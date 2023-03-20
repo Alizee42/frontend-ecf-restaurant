@@ -12,6 +12,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class ReservationComponent implements OnInit {
 
   public reservations$: Observable<any> = new Observable<any>();
+  public placeDisponible$: Observable<any> = new Observable<any>();
 
   formReservation!: FormGroup;
   private _destroy$ = new Subject<void>();
@@ -21,6 +22,7 @@ export class ReservationComponent implements OnInit {
 
   ngOnInit(): void {
     this.reservations$ = this.reservationService.getReservations();
+    this.placeDisponible$ = this.reservationService.getPlaceDisponible();
 
     this.initForm();
   }

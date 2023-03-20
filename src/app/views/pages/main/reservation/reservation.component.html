@@ -67,6 +67,10 @@
                                 <button type="submit" class="btn btn-primary btn-block btn-reserver">Reserver</button>
                             </form>
                             <a routerLink="/enregistrer">Créer un compte</a>
+
+                            <div *ngFor="let item of (placeDisponible$|async)">
+                                <p class="place-disponible"> Nombre de place disponible: {{ item.valeur_par_defaut }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
