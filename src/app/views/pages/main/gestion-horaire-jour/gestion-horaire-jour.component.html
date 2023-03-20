@@ -16,20 +16,23 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Ouverture</th>
-                    <th scope="col">Fermeture</th>
-                    <th scope="col">Moment</th>
                     <th scope="col">Jour</th>
+                    <th scope="col">Ouverture matin</th>
+                    <th scope="col">Fermeture matin</th>
+                    <th scope="col">Ouverture soir</th>
+                    <th scope="col">Fermeture soir</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let item of (horaires$|async)">
                     <th scope="row">{{ item.id }}</th>
-                    <td>{{ item.ouverture }}</td>
-                    <td>{{ item.fermeture }}</td>
-                    <td>{{ item.moment }}</td>
                     <td>{{ item.jour }}</td>
+                    <td>{{ item.ouverture_matin }}</td>
+                    <td>{{ item.fermeture_matin }}</td>
+                    <td>{{ item.ouverture_soir }}</td>
+                    <td>{{ item.fermeture_soir }}</td>
+                    
                     <td>
                         <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
                         <i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteHoraire(item.id)"></i>
@@ -56,16 +59,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Moment</label>
-                    <select formControlName="moment" class="form-control">
-                        <option>Selectionnez le moment</option>
-                        <option>Midi</option>
-                        <option>Soir</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Ouverture</label>
-                    <select formControlName="ouverture" class="form-control">
+                    <label>Ouverture Matin</label>
+                    <select formControlName="ouvertureMatin" class="form-control">
                         <option>Selectionnez votre horaire</option>
                         <option>12h00</option>
                         <option>12h15</option>
@@ -88,8 +83,56 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Fermeture</label>
-                    <select formControlName="fermeture" class="form-control">
+                    <label>Fermeture Matin</label>
+                    <select formControlName="fermetureMatin" class="form-control">
+                        <option>Selectionnez votre horaire</option>
+                        <option>12h00</option>
+                        <option>12h15</option>
+                        <option>12h30</option>
+                        <option>12h45</option>
+                        <option>13h00</option>
+                        <option>19h00</option>
+                        <option>19h15</option>
+                        <option>19h30</option>
+                        <option>19h45</option>
+                        <option>20h00</option>
+                        <option>20h15</option>
+                        <option>20h30</option>
+                        <option>20h45</option>
+                        <option>21h00</option>
+                        <option>21h15</option>
+                        <option>21h30</option>
+                        <option>21h45</option>
+                        <option>22h00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ouverture Soir</label>
+                    <select formControlName="ouvertureSoir" class="form-control">
+                        <option>Selectionnez votre horaire</option>
+                        <option>12h00</option>
+                        <option>12h15</option>
+                        <option>12h30</option>
+                        <option>12h45</option>
+                        <option>13h00</option>
+                        <option>19h00</option>
+                        <option>19h15</option>
+                        <option>19h30</option>
+                        <option>19h45</option>
+                        <option>20h00</option>
+                        <option>20h15</option>
+                        <option>20h30</option>
+                        <option>20h45</option>
+                        <option>21h00</option>
+                        <option>21h15</option>
+                        <option>21h30</option>
+                        <option>21h45</option>
+                        <option>22h00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fermeture Soir</label>
+                    <select formControlName="fermetureSoir" class="form-control">
                         <option>Selectionnez votre horaire</option>
                         <option>12h00</option>
                         <option>12h15</option>

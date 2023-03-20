@@ -32,9 +32,10 @@ export class GestionHoraireJourComponent implements OnInit {
   public initForm(): void {
     this.formGestionHoraireJour = this.formBuilder.group({
         jour: [''],
-        moment: [''],
-        ouverture: [''],
-        fermeture: ['']
+        ouverture_matin: [''],
+        fermeture_matin: [''],
+        ouverture_soir: [''],
+        fermeture_soir: ['']
     })
 }
 
