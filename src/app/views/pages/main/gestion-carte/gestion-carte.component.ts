@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionCarteService } from '@core/service/gestion-carte.service';
@@ -13,6 +13,7 @@ import { GestionCarteService } from '@core/service/gestion-carte.service';
 })
 export class GestionCarteComponent implements OnInit {
 
+  public cartes$: Observable<any> = new Observable<any>();  
   public cartes = [];
   public carte: any;
   formGestionCarte!: FormGroup;
@@ -22,6 +23,7 @@ export class GestionCarteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cartes$ = this.gestionCarteService.getCartes();
     this.getCartes();
     this.initForm();
   }
@@ -53,7 +55,7 @@ export class GestionCarteComponent implements OnInit {
         })
   }
 
-  public deleteCategory(carteId: number): any {
+  public deleteCarte(carteId: number): any {
     this.gestionCarteService.deleteCarte(carteId)
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {

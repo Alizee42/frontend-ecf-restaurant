@@ -1,6 +1,6 @@
 import { GestionFormuleService } from './../../../../core/service/gestion-formule.service';
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -11,6 +11,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class GestionFormuleComponent  implements OnInit {
 
+  public formules$: Observable<any> = new Observable<any>();
   public formules = [];
   public formule: any;
   formGestionFormule!: FormGroup;
@@ -21,6 +22,7 @@ export class GestionFormuleComponent  implements OnInit {
   }
 
   ngOnInit(): void {
+    this.formules$ = this.gestionFormuleService.getFormules();
     this.getFormules();
     this.initForm();
   }
