@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 
@@ -13,6 +13,7 @@ import { GestionHoraireJourService } from '@core/service/gestion-horaire-jour.se
 })
 export class GestionHoraireJourComponent implements OnInit {
 
+  public horaires$: Observable<any> = new Observable<any>();
   public horaireJour = [];
   public horaire: any;
   formGestionHoraireJour!: FormGroup;
@@ -23,6 +24,7 @@ export class GestionHoraireJourComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.horaires$ = this.gestionHoraireJourService.getHoraires();
     this.getHoraireJours();
     this.initForm();
   }

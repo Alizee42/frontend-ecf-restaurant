@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionMenuService } from '@core/service/gestion-menu.service';
@@ -12,6 +12,7 @@ import { GestionMenuService } from '@core/service/gestion-menu.service';
 })
 export class GestionMenuComponent implements OnInit {
 
+  public menus$: Observable<any> = new Observable<any>();
   public menus = [];
   public menu: any;
   formGestionMenu!: FormGroup;
@@ -21,6 +22,7 @@ export class GestionMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.menus$ = this.gestionMenuService.getMenus();
     this.getMenus();
     this.initForm();
   }

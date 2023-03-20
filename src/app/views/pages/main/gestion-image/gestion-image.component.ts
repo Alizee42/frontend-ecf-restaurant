@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionImageService } from '@core/service/gestion-image.service';
@@ -12,6 +12,7 @@ import { GestionImageService } from '@core/service/gestion-image.service';
 })
 export class GestionImageComponent implements OnInit {
   
+  public images$: Observable<any> = new Observable<any>();
   public images = [];
   public image: any;
   formGestionImage!: FormGroup;
@@ -21,6 +22,7 @@ export class GestionImageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.images$ = this.gestionImageService.getImages();
     this.getImages();
     this.initForm();
   }

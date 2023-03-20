@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
+import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionCompteUtilisateurService } from '@core/service/gestion-compte-utilisateur.service';
@@ -12,6 +12,7 @@ import { GestionCompteUtilisateurService } from '@core/service/gestion-compte-ut
 })
 export class GestionCompteUtilisateurComponent implements OnInit {
 
+  public utilisateurs$: Observable<any> = new Observable<any>();
   public compteUlisateurs = [];
   public utilisateur: any;
   formGestionCompteUtilisateur!: FormGroup;
@@ -22,6 +23,7 @@ export class GestionCompteUtilisateurComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.utilisateurs$ = this.gestionCompteUtilisateurService.getUtilisateurs();
     this.getCompteUtilisateurs();
     this.initForm();
   }

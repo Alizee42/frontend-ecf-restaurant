@@ -30,6 +30,7 @@ export class GestionCategorieComponent  implements OnInit {
   }
 
   ngOnInit(): void {
+    // Ajouter ici
     this.categories$ = this.gestionCategorieService.getCategories();
     
     this.getCategories();
