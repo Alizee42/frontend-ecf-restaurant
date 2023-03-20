@@ -32,4 +32,16 @@ export class ReservationService {
     return this.httpClient.delete(`${this.baseUrl}/reservations/${reservationId}`);
   }
 
+  public getPlaceDisponible(): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/places/disponible`);
+  }
+
+  public validerReservation(): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/places/valider`);
+  }
+
+  public refuserReservation(): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/places/refuser`);
+  }
+
  }

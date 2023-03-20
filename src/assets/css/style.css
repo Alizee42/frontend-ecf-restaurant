@@ -314,6 +314,10 @@ ul, li, ol{
 	color: #ffffff;
 }
 
+.place-disponible {
+	color: red
+}
+
 .gallery-single:hover .why-text{
 	text-align: center;
 	bottom: 0px;

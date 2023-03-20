@@ -67,6 +67,10 @@ const routes: Routes = [
         path: 'enregistrer',
         loadChildren: () => import('./enregistrer/enregistrer.module').then(m => m.EnregistrerModule)
       },
+      {
+        path: 'gestion-reservation',
+        loadChildren: () => import('./gestion-reservation/gestion-reservation.module').then(m => m.GestionReservationModule)
+      },
       { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     ]
   }
