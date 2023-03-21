@@ -248,53 +248,18 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 my-4">
+                    <div class="col-md-6 my-4" *ngFor="let item of (menus$|async)">
                         <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
                             <div class="nos_menus">
                                 <div class="titre_menu">
-                                    <span>Formule complète (midi et soir du mardi au dimanche)</span>
-                                    <p class="mt-1 mb-0">Entreé + Plat + Déssert </p>
+                                    <span> {{ item.formule }}</span>
+                                    <p class="mt-1 mb-0"> {{ item.titre }} </p>
                                 </div>
-                                <h6 class="float-right text-primary">20€</h6>
+                                <h6 class="float-right text-primary"> {{ item.prix }}</h6>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 my-4">
-                        <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                            <div class="nos_menus">
-                                <div class="titre_menu">
-                                    <span>Formule Grillade</span>
-                                    <p class="mt-2 mb-0">Entrée du jour + grillade du moment + déssert du jour</p>
-                                </div>
-                                <h6 class="float-right text-primary">18€</h6>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 my-4">
-                        <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                            <div class="nos_menus">
-                                <div class="titre_menu">
-                                    <span>Formule light (midi et soir du mardi au dimanche)</span>
-                                    <p class="mt-1 mb-0">Entreé + Plat ou Plat + Déssert </p>
-                                </div>
-                                <h6 class="float-right text-primary">15€</h6>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="col-md-6 my-4">
-                        <a href="#" class="pb-3 mx-3 d-block text-dark text-decoration-none border border-left-0 border-top-0 border-right-0">
-                            <div class="nos_menus">
-                                <div class="titre_menu">
-                                    <span>Formule poisson</span>
-                                    <p class="mt-2 mb-0">
-                                        Entree + pavé de saumon/dorade+dessert
-                                    </p>
-                                </div>
-                                <h6 class="float-right text-primary">18€</h6>
-                            </div>
-                        </a>
-                    </div>
+                    
                 </div>
                 <a class="btn btn-lg btn-circle btn-outline-new-white btn-menu" routerLink="/reservation">Reservation</a>
             </div>

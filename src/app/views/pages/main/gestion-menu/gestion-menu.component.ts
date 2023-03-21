@@ -30,6 +30,8 @@ export class GestionMenuComponent implements OnInit {
   public initForm(): void {
     this.formGestionMenu = this.formBuilder.group({
         titre: [''],
+        formule: [''],
+        prix: [''],
         
     })
 }
