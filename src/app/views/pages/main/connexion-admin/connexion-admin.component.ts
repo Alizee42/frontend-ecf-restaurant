@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import { ConnexionAdminService } from '@core/service/connexion-admin.service';
 import {Subject, takeUntil} from "rxjs";
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-connexion-admin',
@@ -16,7 +17,7 @@ export class ConnexionAdminComponent implements OnInit {
   formConnexionAdmin!: FormGroup;
   private _destroy$ = new Subject<void>();
 
-  constructor(private connexionAdminService : ConnexionAdminService, private formBuilder: FormBuilder) {
+  constructor(private router: Router, private connexionAdminService : ConnexionAdminService, private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
@@ -35,11 +36,24 @@ export class ConnexionAdminComponent implements OnInit {
     console.log("Login ", this.formConnexionAdmin.value);
     const observable = this.connexionAdminService.login(this.formConnexionAdmin.value);
 
+    let status: any;
+
     observable.pipe(takeUntil(this._destroy$))
         .subscribe(data => {
-            console.log("Login ", data);
-            window.location.reload();
-            alert("Connexion effectuée avec succès");
+            status = data.status;
+            if (status == "Compte administrateur trouvé") {
+              alert("Connexion effectuée avec succès");
+              this.router.navigate(['/admin'])
+            } else if(status == "Compte client trouvé") {
+              alert("Connexion effectuée avec succès");
+              this.router.navigate(['/reservation'])
+            } else {
+              alert("Connexion effectuée avec succès");
+              this.router.navigate(['/'])
+            }
+
+        }, error => {
+          alert("Email ou mot de passe incorrect");
         })
 }
 
