@@ -39,6 +39,7 @@ export class ConnexionAdminComponent implements OnInit {
         .subscribe(data => {
             console.log("Login ", data);
             window.location.reload();
+            alert("Connexion effectuée avec succès");
         })
 }
 

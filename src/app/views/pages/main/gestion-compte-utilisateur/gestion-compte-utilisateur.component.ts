@@ -62,6 +62,7 @@ export class GestionCompteUtilisateurComponent implements OnInit {
           console.log("Remove  utilisateur", data);
           this.utilisateur = data;
           window.location.reload();
+          alert("Utilisateur supprimé");
         })
   }
   
@@ -74,6 +75,7 @@ export class GestionCompteUtilisateurComponent implements OnInit {
         .subscribe(data => {
             console.log("Create Utilisateur", data);
             window.location.reload();
+            alert("Utilisateur crée avec succès");
         })
 }
 

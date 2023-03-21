@@ -25,6 +25,7 @@ export class GestionReservationComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           window.location.reload();
+          alert("Réservation supprimée");
         });
     this.refuserReservation();
   }
@@ -34,6 +35,7 @@ export class GestionReservationComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           window.location.reload();
+          alert("Réservation acceptée");
         })
   }
 
@@ -42,6 +44,7 @@ export class GestionReservationComponent implements OnInit {
         .pipe(takeUntil(this._destroy$))
         .subscribe(data => {
           window.location.reload();
+          alert("Réservation refusée");
         })
   }
 

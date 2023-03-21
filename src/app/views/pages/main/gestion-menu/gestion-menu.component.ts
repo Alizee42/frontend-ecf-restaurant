@@ -61,6 +61,7 @@ export class GestionMenuComponent implements OnInit {
           console.log("Remove Menu", data);
           this.menu = data;
           window.location.reload();
+          alert("Menu supprimé");
         })
   }
 
@@ -73,6 +74,7 @@ export class GestionMenuComponent implements OnInit {
         .subscribe(data => {
             console.log("Create Menu", data);
             window.location.reload();
+            alert("Menu enregistré avec succès");
         })
 }
 

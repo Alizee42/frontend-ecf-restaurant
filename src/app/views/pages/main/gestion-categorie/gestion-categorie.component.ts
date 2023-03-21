@@ -30,7 +30,6 @@ export class GestionCategorieComponent  implements OnInit {
   }
 
   ngOnInit(): void {
-    // Ajouter ici
     this.categories$ = this.gestionCategorieService.getCategories();
     
     this.getCategories();
@@ -70,6 +69,7 @@ export class GestionCategorieComponent  implements OnInit {
           console.log("Remove Category", data);
           this.category = data;
           window.location.reload();
+          alert("Catégorie supprimée ");
         })
   }
 
@@ -82,6 +82,7 @@ export class GestionCategorieComponent  implements OnInit {
           .subscribe(data => {
               console.log("Create or update Categorie", data);
               window.location.reload();
+              alert("Catégorie ajoutée avec succès");
           })
   }
 

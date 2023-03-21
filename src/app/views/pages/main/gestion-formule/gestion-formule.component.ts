@@ -61,6 +61,7 @@ export class GestionFormuleComponent  implements OnInit {
           console.log("Remove Formule", data);
           this.formule = data;
           window.location.reload();
+          alert("Formule supprimée");
         })
   }
 
@@ -73,6 +74,7 @@ export class GestionFormuleComponent  implements OnInit {
         .subscribe(data => {
             console.log("Create Formule", data);
             window.location.reload();
+            alert("Formule crée avec succès");
         })
 }
 

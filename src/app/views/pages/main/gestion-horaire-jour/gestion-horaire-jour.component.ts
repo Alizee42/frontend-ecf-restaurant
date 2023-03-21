@@ -64,6 +64,7 @@ export class GestionHoraireJourComponent implements OnInit {
           console.log("Remove Horaire", data);
           this.horaire = data;
           window.location.reload();
+          alert("Horaire supprimé");
         })
       }
 
@@ -76,6 +77,7 @@ export class GestionHoraireJourComponent implements OnInit {
               .subscribe(data => {
                   console.log("Create Horaire", data);
                   window.location.reload();
+                  alert("Horaire enregistré avec succès");
               })
       }
     
