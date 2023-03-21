@@ -33,7 +33,9 @@ export class GestionCarteComponent implements OnInit {
         titre: [''],
         description: [''],
         prix: [''],
-        est_publie: ['']
+        est_publie: [''],
+        image: [''],
+        categorie: ['']
     })
 }
 

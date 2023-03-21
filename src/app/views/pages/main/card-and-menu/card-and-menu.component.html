@@ -34,38 +34,17 @@
             </div>
         </div>
         <div class="row special-list">
-            <div class="col-lg-4 col-md-6 special-grid drinks">
+            <div *ngFor="let item of (cartes$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div class="gallery-single fix">
-                    <img src="assets/images/menu/boisson1.jpg" class="img-fluid" alt="Image">
+                    <img src="{{ item.image }}" class="img-fluid" alt="Image">
                     <div class="why-text">
-                        <h3>Boisson 1</h3>
-                        <p>Cosmopolitan</p>
-                        <h5> 8€</h5>
+                        <h3>{{ item.titre }}</h3>
+                        <p>{{ item.description }}</p>
+                        <h5> {{ item.prix }}€</h5>
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 special-grid drinks">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/boisson2.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Boisson 2</h3>
-                        <p>Mojito</p>
-                        <h5> 8€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid drinks">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/boisson3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Boisson 3</h3>
-                        <p>Téquila</p>
-                        <h5> 8€</h5>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="row">
@@ -81,36 +60,13 @@
             </div>
         </div>
         <div class="row special-list">
-
-            <div class="col-lg-4 col-md-6 special-grid lunch">
+            <div *ngFor="let item of (cartes$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div class="gallery-single fix">
-                    <img src="assets/images/menu/entree1.jpg" class="img-fluid" alt="Image">
+                    <img src="{{ item.image }}" class="img-fluid" alt="Image">
                     <div class="why-text">
-                        <h3>Entrée 1</h3>
-                        <p>Tartelettes ricotta basilic asperges, citron vert</p>
-                        <h5> 11€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid lunch">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/entree2.jpeg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Entrée 2 </h3>
-                        <p>Salade de homard , Haricot et amandes fraiches</p>
-                        <h5> 12€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid lunch">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/entree3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Entrée 3</h3>
-                        <p>Salade de Figues au Balsamique Parmesan et Jambon de Parme</p>
-                        <h5> 16€</h5>
+                        <h3>{{ item.titre }}</h3>
+                        <p>{{ item.description }}</p>
+                        <h5> {{ item.prix }}€</h5>
                     </div>
                 </div>
             </div>
@@ -130,35 +86,13 @@
             </div>
         </div>
         <div class="row special-list">
-            <div class="col-lg-4 col-md-6 special-grid dinner">
+            <div *ngFor="let item of (cartes$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div class="gallery-single fix">
-                    <img src="assets/images/menu/plat1.jpg" class="img-fluid" alt="Image">
+                    <img src="{{ item.image }}" class="img-fluid" alt="Image">
                     <div class="why-text">
-                        <h3>Plat 1</h3>
-                        <p>Magret de Canard à l'orange</p>
-                        <h5> 21€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid dinner">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/plat2.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Plat 2</h3>
-                        <p>Saumon mariné aux epices</p>
-                        <h5> 17€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid dinner">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/plat3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Plat 3</h3>
-                        <p>Coq au vin accompagné de légumes</p>
-                        <h5> 19€</h5>
+                        <h3>{{ item.titre }}</h3>
+                        <p>{{ item.description }}</p>
+                        <h5> {{ item.prix }}€</h5>
                     </div>
                 </div>
             </div>
@@ -178,36 +112,13 @@
             </div>
         </div>
         <div class="row special-list">
-
-            <div class="col-lg-4 col-md-6 special-grid dessert">
+            <div *ngFor="let item of (cartes$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div class="gallery-single fix">
-                    <img src="assets/images/menu/dessert1.jpg" class="img-fluid" alt="Image">
+                    <img src="{{ item.image }}" class="img-fluid" alt="Image">
                     <div class="why-text">
-                        <h3>Dessert 1</h3>
-                        <p>Bourbon caramelisé </p>
-                        <h5> 9€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid dessert">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/dessert2.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Dessert 2</h3>
-                        <p>Tartellette a la fraise</p>
-                        <h5> 7€</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid dessert">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/dessert3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h3>Dessert 3</h3>
-                        <p>Gauffre framboise</p>
-                        <h5> 8€</h5>
+                        <h3>{{ item.titre }}</h3>
+                        <p>{{ item.description }}</p>
+                        <h5> {{ item.prix }}€</h5>
                     </div>
                 </div>
             </div>

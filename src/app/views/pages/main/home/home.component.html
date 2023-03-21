@@ -71,61 +71,20 @@
                 </div>
             </div>
         </div>
-            
+         
         <div class="row special-list">
-            <div class="col-lg-4 col-md-6 special-grid drinks">
+            <div *ngFor="let item of (images$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div class="gallery-single fix">
-                    <img src="assets/images/menu/boisson2.jpg" class="img-fluid" alt="Image">
+                    <img src="{{ item.path }}" class="img-fluid" alt="Image">
                     <div class="why-text">
-                        <h4>Mojito</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid drinks">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/plat2.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h4>Saumon mariné aux épices</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid drinks">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/entree3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h4>Salade de Figues</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 special-grid lunch">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/dessert1.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h4>Bourbon caramelisé</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 special-grid dinner">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/entree2.jpeg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h4>Salade homard </h4>
+                        <h3>{{ item.titre }}</h3>
+                        
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 special-grid lunch">
-                <div class="gallery-single fix">
-                    <img src="assets/images/menu/boisson3.jpg" class="img-fluid" alt="Image">
-                    <div class="why-text">
-                        <h4>Téquila</h4>
-                    </div>
-                </div>
-            </div>				
         </div>
+        
         <button routerLink="/reservation" class="btn btn-primary btn-block btn-reserver">Reserver</button>
     </div>
 </div>
