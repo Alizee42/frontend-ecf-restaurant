@@ -17,6 +17,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Titre</th>
+                    <th scope="col">Formule</th>
+                    <th scope="col">Prix</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
@@ -24,6 +26,8 @@
                 <tr *ngFor="let item of (menus$|async)">
                     <th scope="row">{{ item.id }}</th>
                     <td>{{ item.titre }}</td>
+                    <td>{{ item.formule }}</td>
+                    <td>{{ item.prix }}</td>
                     <td>
                         <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
                         <i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteMenu(item.id)"></i>
@@ -37,7 +41,13 @@
         <div class="col-md-12">
             <form [formGroup]="formGestionMenu" (ngSubmit)="createOrUpdateMenu()">
                 <div class="form-group">
-                    <input formControlName="titre" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Titre">
+                    <input formControlName="titre" type="text" class="form-control" placeholder="Titre">
+                </div>
+                <div class="form-group">
+                    <input formControlName="formule" type="text" class="form-control" placeholder="Formule">
+                </div>
+                <div class="form-group">
+                    <input formControlName="prix" type="text" class="form-control" placeholder="Prix">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block btn-reserver">Envoyer</button>
             </form>
