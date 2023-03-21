@@ -21,7 +21,6 @@
                     <th scope="col">Prix</th>
                     <th scope="col">Url</th>
                     <th scope="col">categorie</th>
-                    <th scope="col">Publication</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
@@ -33,7 +32,6 @@
                     <td>{{ item.prix }}</td>
                     <td>{{ item.image }}</td>
                     <td>{{ item.categorie }}</td>
-                    <td>{{ item.est_publie }}</td>
                     <td>
                         <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
                         <i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteCarte(item.id)"></i>
