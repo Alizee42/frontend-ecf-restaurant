@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EnregistrerRoutingModule } from './enregistrer-routing.module';
 import { EnregistrerComponent } from './enregistrer.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { EnregistrerComponent } from './enregistrer.component';
   ],
   imports: [
     CommonModule,
-    EnregistrerRoutingModule
+    EnregistrerRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class EnregistrerModule { }

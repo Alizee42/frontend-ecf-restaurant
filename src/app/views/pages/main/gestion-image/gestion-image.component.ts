@@ -59,6 +59,7 @@ export class GestionImageComponent implements OnInit {
           console.log("Remove Image", data);
           this.image = data;
           window.location.reload();
+          alert("Image supprimée");
         })
   }
 
@@ -71,6 +72,7 @@ export class GestionImageComponent implements OnInit {
         .subscribe(data => {
             console.log("Create Image", data);
             window.location.reload();
+            alert("Image enregistrée avec succès");
         })
 }
 

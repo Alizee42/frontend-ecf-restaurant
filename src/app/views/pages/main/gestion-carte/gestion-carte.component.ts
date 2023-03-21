@@ -62,6 +62,7 @@ export class GestionCarteComponent implements OnInit {
           console.log("Remove Carte", data);
           this.carte = data;
           window.location.reload();
+          alert("Carte supprimée");
         })
   }
 
@@ -74,6 +75,7 @@ export class GestionCarteComponent implements OnInit {
           .subscribe(data => {
               console.log("Create Carte", data);
               window.location.reload();
+              alert("Carte ajoutée avec succès");
           })
   }
 

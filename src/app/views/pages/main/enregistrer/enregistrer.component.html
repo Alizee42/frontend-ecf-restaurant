@@ -25,27 +25,27 @@
                             <img src="assets/images/contact/creer-mon-compte.png" alt="creer-mon-compte" class="w-100 rounded shadow">
                         </div>
                         <div class="col-md-6">
-                            <form>
+                            <form [formGroup]="formEnregistrer" (ngSubmit)="enregistrer()">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="lastname" placeholder="Nom">
+                                    <input formControlName="nom" type="text" class="form-control" id="lastname" placeholder="Nom">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="firstname" placeholder="Prénoms">
+                                    <input formControlName="prenoms" type="text" class="form-control" id="firstname" placeholder="Prénoms">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control"  placeholder="Téléphone">
+                                    <input formControlName="telephone" type="tel" class="form-control"  placeholder="Téléphone">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
+                                    <input formControlName="email" type="text" class="form-control" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                                    <input formControlName="password" type="password" class="form-control" id="password" placeholder="Mot de passe">
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Nombre de convives">
+                                    <input formControlName="nombreDeConvive" type="number" class="form-control" placeholder="Nombre de convives">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="allergies" placeholder="Mentionnez les allergies">
+                                    <input formControlName="allergies" type="text" class="form-control" id="allergies" placeholder="Mentionnez les allergies">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block btn-reserver">S'inscrire</button>
                             </form>
