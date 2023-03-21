@@ -27,7 +27,7 @@
                         <div class="col-md-6">
                             <form [formGroup]="formReservation" (ngSubmit)="createReservation()">
                                 <div class="form-group">
-                                    <input formControlName="nom" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom & Prénoms">
+                                    <input formControlName="nom" type="text" class="form-control" placeholder="Nom & Prénoms">
                                 </div>
                                 <div class="form-group">
                                     <input formControlName="numero" type="tel" class="form-control" name="phone" placeholder="Téléphone">
@@ -59,10 +59,10 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input formControlName="nombreConvive" type="number" class="form-control" name="seats" placeholder="Nombre de couverts">
+                                    <input formControlName="nombreConvive" type="number" class="form-control" placeholder="Nombre de couverts">
                                 </div>
                                 <div class="form-group">
-                                    <input formControlName="allergie" type="text" class="form-control" id="allergies" aria-describedby="emailHelp" placeholder="Mentionnez les allergies">
+                                    <input formControlName="allergie" type="text" class="form-control" id="allergies" placeholder="Mentionnez les allergies">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block btn-reserver">Reserver</button>
                             </form>
