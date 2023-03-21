@@ -88,6 +88,7 @@
         <div class="row special-list">
             <div *ngFor="let item of (cartes$|async)" class="col-lg-4 col-md-6 special-grid drinks">
                 <div *ngIf="item.categorie == 'plat'" class="gallery-single fix">
+                    <
                     <img src="{{ item.image }}" class="img-fluid" alt="Image">
                     <div class="why-text">
                         <h3>{{ item.titre }}</h3>
