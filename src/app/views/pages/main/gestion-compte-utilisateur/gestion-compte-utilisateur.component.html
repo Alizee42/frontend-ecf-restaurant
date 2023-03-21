@@ -43,10 +43,10 @@
         <div class="col-md-12">
             <form [formGroup]="formGestionCompteUtilisateur" (ngSubmit)="createOrUpdateUtilisateur()">
                 <div class="form-group">
-                    <input formControlName="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <input formControlName="email" type="text" class="form-control"  placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <input formControlName="password" type="tel" class="form-control" name="phone" placeholder="Mot de passe">
+                    <input formControlName="password" type="tel" class="form-control" placeholder="Mot de passe">
                 </div>
                 <div class="form-group">
                     <select formControlName="role" class="form-control">
