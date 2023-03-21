@@ -3,6 +3,7 @@ import {Subject, takeUntil, Observable} from "rxjs";
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import { GestionImageService } from '@core/service/gestion-image.service';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-gestion-image',
@@ -18,7 +19,7 @@ export class GestionImageComponent implements OnInit {
   formGestionImage!: FormGroup;
   private _destroy$ = new Subject<void>();
 
-  constructor(private gestionImageService : GestionImageService,  private formBuilder: FormBuilder) {
+  constructor(private router: Router, private gestionImageService : GestionImageService,  private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
@@ -60,6 +61,7 @@ export class GestionImageComponent implements OnInit {
           this.image = data;
           window.location.reload();
           alert("Image supprimée");
+          this.router.navigate(['/gestion-image'])
         })
   }
 
