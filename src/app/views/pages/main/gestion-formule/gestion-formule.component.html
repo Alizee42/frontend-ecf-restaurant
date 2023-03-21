@@ -39,10 +39,10 @@
         <div class="col-md-12">
             <form [formGroup]="formGestionFormule" (ngSubmit)="createOrUpdateFormule()">
                 <div class="form-group">
-                    <input formControlName="description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description">
+                    <input formControlName="description" type="text" class="form-control"  placeholder="Description">
                 </div>
                 <div class="form-group">
-                    <input formControlName="prix" type="number" class="form-control" name="seats" placeholder="Prix">
+                    <input formControlName="prix" type="number" class="form-control"  placeholder="Prix">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block btn-reserver">Envoyer</button>
             </form>
