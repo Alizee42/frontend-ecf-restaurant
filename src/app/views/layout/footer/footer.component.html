@@ -43,7 +43,7 @@
             <div class="col-lg-3 col-md-6">
                 <h3>Horaire d'ouverture</h3>
                 <p *ngFor="let item of (horaires$|async)">
-                    <span class="text-color">{{ item.jour }} :</span> {{ item.ouverture_matin }} - {{ item.fermeture_matin }} / {{ item.ouverture_soir }} - {{ item.fermeture_soir }}
+                    <span class="text-color">{{ item.jour }}:</span> {{ item.ouverture_matin }} - {{ item.fermeture_matin }} / {{ item.ouverture_soir }} - {{ item.fermeture_soir }}
                 </p>
                 
             </div>
