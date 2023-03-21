@@ -19,16 +19,20 @@
                     <th scope="col">Titre</th>
                     <th scope="col">Description</th>
                     <th scope="col">Prix</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">categorie</th>
                     <th scope="col">Publication</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr  *ngFor="let item of (cartes$|async)">
+                <tr *ngFor="let item of (cartes$|async)">
                     <th scope="row">{{ item.id }}</th>
                     <td>{{ item.titre }}</td>
                     <td>{{ item.description }}</td>
-                    <td>@{{ item.prix }}</td>
+                    <td>{{ item.prix }}</td>
+                    <td>{{ item.image }}</td>
+                    <td>{{ item.categorie }}</td>
                     <td>{{ item.est_publier }}</td>
                     <td>
                         <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
@@ -51,8 +55,20 @@
                     <input formControlName="prix" type="number" class="form-control"  placeholder="Prix">
                 </div>
                 <div class="form-group">
+                    <input formControlName="image" type="text" class="form-control"  placeholder="Url image">
+                </div>
+                <div class="form-group">
+                    <select formControlName="categorie" class="form-control">
+                        <option value="">Selectionnez votre categorie</option>
+                        <option value="entree">Entrée</option>
+                        <option value="boisson">Boisson</option>
+                        <option value="plat">Plat</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <select formControlName="est_publie" class="form-control">
-                        <option>Selectionnez votre statut</option>
+                        <option value="">Selectionnez votre statut</option>
                         <option>Publier</option>
                         <option>Non-Publier</option>
                     </select>
