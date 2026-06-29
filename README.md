@@ -1,59 +1,68 @@
+# Quai Antique — Frontend (ECF)
 
-###  Frontend-ecf-restaurant
+Application Angular pour le restaurant **Quai Antique**, projet d'examen de certification (Diplôme Niv. 5). Interface publique et back-office admin consommant l'API Symfony.
 
-- [x] HTML5 
-- [x] CSS3 
-- [x] Bootstrap
-- [x] JavaScript (Angular Version 15.1.4)
-- [x] Netlify
+Démo en ligne : https://main--subtle-alpaca-8698c9.netlify.app/
 
-# Netlify Webapp
+## Stack technique
 
-https://main--subtle-alpaca-8698c9.netlify.app/
+| Technologie | Version |
+|---|---|
+| Angular | 15.1.4 |
+| TypeScript | ~4.9.4 |
+| Bootstrap | ^4.1.1 |
+| jQuery | ^3.2.1 |
+| RxJS | ~7.8.0 |
+| SCSS | styles personnalisés |
+| Angular CLI | ~15.1.4 |
 
-![Quai Antique Webapp](https://raw.githubusercontent.com/Alizee42/frontend-ecf-restaurant/main/src/assets/images/logo/logo3.jpg)
+## Prérequis
 
+- Node.js 16+
+- Yarn
+- Angular CLI 15
+- Backend `backend-ecf-restaurant` démarré
 
-#### Installation En local
+## Installation et lancement
 
-###### Etape 1: Cloner le projet front-end
-[Download](https://github.com/Alizee42/frontend-ecf-restaurant)
-```
+```bash
 git clone https://github.com/Alizee42/frontend-ecf-restaurant.git
-```
+cd frontend-ecf-restaurant
 
-###### Etape 2: Installer les dependences
-Ouvrir le terminal dans le projet frontend-ecf-restaurant
-Ensuite lancer la commande
-```
-yarn
-```
+yarn   # installer les dépendances
 
+# Configurer l'URL du backend dans chaque service :
+# src/app/core/service/*.service.ts
+# Modifier : private baseUrl = 'https://localhost:<port>/api/rest/v1';
 
-###### Etape 3: Configuration et connection au back-end
-Modifier le BASE_URL en insérant le port de démarrage du back-end
-dans les fichiers de services
-``` 
-Se rendre dans le dossier "src/app/core/service/
-Ensuite modifier l'url de connection au back-end dans les ficheirs de service
-private baseUrl = 'https://localhost:<port_back_end>/api/rest/v1';
-``` 
-
-###### Etape 6: Demarrer le projet
-Saisir la commande
-``` 
 ng serve
+# Application disponible sur http://localhost:4200
+```
 
-Naviguer sur le lien `http://localhost:4200/`
-``` 
+## Connexion administrateur
 
+```
+Email    : quaiantique@admin.com
+Mot de passe : 123456789@
+```
 
-###### Etape 7: Accès de connexion à l'espace administrateur
-Saisir
-``` 
-Email: quaiantique@admin.com
-Mot de passe: 123456789@
-``` 
+## Pages
 
+| Route | Description |
+|---|---|
+| `/` | Page d'accueil du restaurant |
+| `/menu` | Carte et menus |
+| `/enregistrer` | Inscription client |
+| `/connexion-client` | Connexion client |
+| `/reservation` | Réservation de table |
+| `/contact` | Contact |
+| `/admin` | Connexion administrateur |
+| `/admin/*` | Gestion : carte, catégories, formules, horaires, images, menus, réservations, comptes |
 
+## Build et déploiement
 
+```bash
+ng build   # Build de production vers dist/
+```
+
+Déployable sur Netlify (configuration incluse).
